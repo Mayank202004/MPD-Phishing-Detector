@@ -1,0 +1,91 @@
+/* ===== Phish Detector Banner Styles (Red Alert Theme) ===== */
+#phish-detector-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999;
+  background: #fee2e2; /* soft red background */
+  color: #7f1d1d; /* dark red text */
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  padding: 14px 16px; /* slightly more padding to prevent clipping */
+  border-bottom: 2px solid #dc2626; /* bright red border */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideDown 0.4s ease-out;
+  box-sizing: border-box;
+}
+
+/* Text emphasis inside banner */
+#phish-detector-banner strong {
+  font-weight: 600;
+}
+
+/* Dismiss button */
+.pd-dismiss {
+  background: #dc2626; /* bright red button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px; /* increased padding for better click area */
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+  align-self: center; /* ensures proper vertical alignment */
+}
+
+.pd-dismiss:hover {
+  background: #b91c1c; /* darker red on hover */
+}
+
+/* ===== Shopping Site Banner (Blue Info Theme) ===== */
+#phish-detector-banner.shopping {
+  background: #dbeafe; /* light blue background */
+  color: #1e3a8a; /* dark blue text */
+  border-bottom: 2px solid #2563eb; /* bright blue border */
+}
+
+/* Dismiss button for shopping banner */
+#phish-detector-banner.shopping .pd-dismiss {
+  background: #2563eb; /* bright blue button */
+  color: white;
+}
+
+#phish-detector-banner.shopping .pd-dismiss:hover {
+  background: #1e40af; /* darker blue on hover */
+}
+
+/* ===== Banking Site Banner (Green Trusted Theme) ===== */
+#phish-detector-banner.banking {
+  background: #dcfce7; /* light green background */
+  color: #065f46; /* dark green text */
+  border-bottom: 2px solid #059669; /* bright green border */
+}
+
+/* Dismiss button for banking banner */
+#phish-detector-banner.banking .pd-dismiss {
+  background: #059669; /* medium green button */
+  color: white;
+}
+
+#phish-detector-banner.banking .pd-dismiss:hover {
+  background: #047857; /* darker green on hover */
+}
+
+
+
+/* Slide-down entry animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

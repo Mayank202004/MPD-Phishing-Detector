@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>⚠️ Site Blocked</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #fee2e2;
+      color: #7f1d1d;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    .box {
+      background: #fff;
+      border: 2px solid #dc2626;
+      padding: 28px 36px;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #b91c1c;
+    }
+    button {
+      margin-top: 16px;
+      background: #dc2626;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.2s ease;
+    }
+    button:hover { background: #b91c1c; }
+    .secondary {
+      background: #e5e7eb;
+      color: #111;
+      margin-left: 10px;
+    }
+    .secondary:hover { background: #d1d5db; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>⚠️ Suspicious Site Blocked</h2>
+    <p>This website was flagged as potentially unsafe by <b>Phish Detector</b>.</p>
+    <p>You can go back safely or proceed at your own risk.</p>
+    <div>
+      <button id="backBtn">Go Back</button>
+      <button class="secondary" id="visitBtn">Visit Anyway</button>
+    </div>
+  </div>
+
+  <!-- ✅ External JS file (CSP-safe) -->
+  <script src="blocked.js"></script>
+</body>
+</html>
